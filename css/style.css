@@ -1,0 +1,114 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    max-width: 1440px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(30, 38%, 92%);
+}
+
+.card {
+    max-width: 500px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 0.5rem;
+    background-color: hsl(0, 0%, 100%);
+}
+
+
+.product {
+    width: 50%;
+    background-image: url(../images/image-product-desktop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.preview {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+    padding: 2rem 1.8rem;
+}
+
+.preview .product-type {
+    color: hsl(228, 12%, 48%);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.preview .title {
+    font-family: 'Fraunces', serif;
+    color: hsl(212, 21%, 14%);
+    padding-right: 1rem;
+}
+
+.preview .prices {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.preview p,
+.full-price {
+    font-size: 12px;
+    color: hsl(228, 12%, 48%);
+}
+
+.discount-price {
+    font-family: 'Fraunces', serif;
+    color: hsl(158, 36%, 37%);
+}
+
+.preview #button-buy {
+    width: 100%;
+    padding: 0.7rem;
+    background-color: hsl(158, 36%, 37%);
+    color: hsl(0, 0%, 100%);
+    border: none;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.preview #button-buy:hover {
+    cursor: pointer;
+    background-color: hsl(158, 40%, 23%);
+}
+
+@media screen and (max-width:650px) {
+    body {
+        min-width: 375px;
+        padding: 2rem 1.8rem;
+    }
+
+    .card {
+        flex-direction: column;
+    }
+
+    .product {
+        background-image: url(../images/image-product-mobile.jpg);
+        height: 40vh;
+        width: 100%;
+        border-radius: 0.5rem 0.5rem 0 0;
+    }
+
+    .preview {
+        width: 100%;
+    }
+
+    .preview p,
+    .full-price {
+        font-size: 14px;
+    }
+}
